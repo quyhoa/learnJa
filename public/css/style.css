@@ -1,0 +1,686 @@
+/*======================================================
+common
+======================================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead { border: 0; font-family: inherit; font-size: 16px; font-style: inherit; font-weight: inherit; margin: 0; outline: 0; padding: 0;}
+:focus { outline: 0}
+ol, ul { list-style: none}
+caption { font-weight: normal; text-align: left}
+blockquote:before, blockquote:after,q:before, q:after { content: ""}
+blockquote, q { quotes: "" ""}
+a { text-decoration: none; color: #000;}
+img { border: 0; display: block; width: 100%; height: auto}
+i { font-style: normal}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block}
+input, select { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 0}
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;}
+table { border-collapse:collapse; border-spacing:0}
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+    font-size: 16px;
+    line-height: 1.33333;
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    background: #ededed;
+    position: relative;
+}
+button::-moz-focus-inner { border:0; padding:0;}
+select::-ms-expand { display: none}
+
+.mt10 { margin-top: 10px;}
+.mt20 { margin-top: 20px;}
+.mt30 { margin-top: 30px;}
+.mb10 { margin-bottom: 10px;}
+.mb15 { margin-bottom: 15px;}
+.mb20 { margin-bottom: 20px;}
+.mb30 { margin-bottom: 30px;}
+.mb40 { margin-bottom: 40px;}
+.mb50 { margin-bottom: 50px;}
+.mb60 { margin-bottom: 60px;}
+.pdl3 { padding-left: 3px;}
+.auto { margin-left: auto; margin-right: auto;}
+
+.clear:after { content: ''; display: block; clear: both; height: 0; visibility: hidden;}
+.block--left { float: left;}
+.block--right { float: right;}
+.block--none { float: none;}
+.block { display: block;}
+.block__inline { display: inline-block;}
+.block__table { display: table; width: 100%;}
+.block__cell { display: table-cell;}
+.block--top { vertical-align: top;}
+.block--middle { vertical-align: middle;}
+.block--bottom { vertical-align: bottom;}
+.txt--left { text-align: left;}
+.txt--right { text-align: right;}
+.txt--center { text-align: center;}
+.txt--bold { font-weight: bold;}
+.txt--blue { color: #258bce;}
+.txt--white { color: #fff;}
+.txt--gray { color: #333;}
+.bg--none { background: none !important;}
+.show-sp {
+        display: none;
+    }
+.txt-spacing {letter-spacing: 3px;}
+.inner {
+    max-width: 641px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.bg-white {
+    background: #ffffff;
+}
+.content {
+    width: 90%;
+    margin: 48px auto 0 auto;
+}
+.content-sub {
+    width: 99%;
+    margin: 15px 0 10px 0;
+}
+.header {
+    background: url('../images/banner.png') no-repeat center top;
+    width: 100%;
+    height: auto;
+    min-height: 476px;
+    margin: 0 auto;
+    position: relative;
+}
+.alt_banner {
+    text-indent: -10000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info-header {
+    background: radial-gradient(ellipse farthest-corner at center bottom, #222FA7 39%, #05117C 72%);
+    background: -moz-radial-gradient(ellipse farthest-corner at center bottom, #222FA7 39%, #05117C 72%);
+    background: -o-radial-gradient(ellipse farthest-corner at center bottom, #222FA7 39%, #05117C 72%);
+    background: -ms-radial-gradient(ellipse farthest-corner at center bottom, #222FA7 39%, #05117C 72%);
+    background: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #222FA7 39%, #05117C 72%);
+}
+.detail-info-header {
+    display: inline-block;
+    width: 96%;
+    background: #030B5F;
+    padding: 2% 0% 2% 3.3%;
+}
+.detail-info-header dt {
+    float: left;
+    width: 24%;
+    color: #ffffff;
+    font-size: 18px;
+}
+.detail-info-header dd {
+    float: left;
+    color: #b6966a;
+    font-size: 20px;
+}
+.info-header p {
+    display: block;
+    text-align: center;
+    color: #9db8f7;
+    font-size: 20px;
+    padding: 20px 0 22px 0;
+}
+.info-header p span {
+    font-size: 14px;
+
+}
+.btn-go-page {
+    width: 420px;
+    margin: 40px auto 20px auto;
+}
+.btn-go-page:hover {
+    opacity: 0.9;
+}
+.title-blue a{
+    color: #ffffff;
+    padding: 6px 3% 5px 3%;
+}
+.title-blue {
+    background: #141650;
+    border-radius: 69px 69px 69px 69px;
+    -moz-border-radius: 69px 69px 69px 69px;
+    -webkit-border-radius: 69px 69px 69px 69px;
+    border: 0px solid 141650;
+    color: #ffffff;
+    padding: 6px 3% 5px 3%;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.group-info {
+    margin-bottom: 30px;
+}
+.group-info p {
+    margin-bottom: 15px;
+}
+.list-info, .list-info-flower, .list-info-dots {
+    list-style: outside none none;
+    margin-left: 5px;
+}
+.list-info li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    text-indent: -16px;
+}
+.list-info li::before {
+    margin-right: 3px;
+}
+.list-info li.first-number::before {
+    content: "①";
+}
+.list-info li.first-number2::before {
+    content: "②";
+}
+.list-info li.first-number3::before {
+    content: "③";
+}
+.list-info-flower li::before {
+    margin-right: 3px;
+    content: "※";
+}
+.list-info-dots li::before {
+    margin-right: 3px;
+    content: "●";
+}
+.view-arrow {
+    position: relative;
+    margin-left: 10px;
+}
+.view-arrow::before {
+    content:"";
+    position: absolute;
+    left: -11px;
+    top: 6px;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000000;
+}
+.txt-blue {
+    color: #090cb4;
+}
+.txt-red {
+    color: #d80000;
+}
+.txt-bold {
+    font-weight: bold;
+}
+.txt-link {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footer {
+    background: #141650;
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+.footer p:first-child {
+    font-size: 25px;
+    padding-top: 40px;
+    font-weight: bold;
+}
+.line-dotted {
+    width: 25%;
+    border-bottom: 1px dotted #ffffff;
+    margin: 20px auto 26px auto;
+}
+.txt-underline {
+    text-decoration: underline;
+}
+/* Hieudt add css PC*/
+.contentsun1{
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+}
+.bothcontent{
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+.headersun{
+    background: url(../images/sun1/banner.png) no-repeat center top;
+    min-height: 229px;
+}
+.textsun1{
+    text-align: center;
+    border-width:4px;  
+    border-bottom-style:double;
+    border-color: #b28922;
+    padding-bottom: 7px;
+    margin-bottom: 30px;
+}
+.textsun1 img{
+    width: auto;
+    display: inline-block;
+}
+.mt40 { margin-top: 40px;}
+.h3sun1{
+    text-align: left;
+    font-size: 18px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.h3sun1 span{
+    display: inline-block;
+    background: #d40c19;
+    color: #ffffff;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.textarea-sun1{
+    border-radius: 4px;
+    width: 100%;
+    min-height: 25px;
+    padding: 5px;
+    border: 1px solid #8d8d8d;
+}
+.groupcoloer{
+    overflow: hidden;
+    background: #f3f3f3;
+    padding: 10px 20px;
+}
+.groupin{
+    overflow: hidden;
+    max-width: 265px;
+    width: 100%;
+    margin: 0 auto;
+}
+.borderbt{
+    border-bottom: 1px dotted #d6d6d6;
+}
+.groupin img{
+    width: auto;
+}
+.bothcontent .content{
+    width: 100%;
+}
+.h3sun1 span.colorgui{
+    background: #8d8d8d;
+}
+.h3sun1 span.specspan{
+    background: none;
+    color: #000000;
+    font-size: 12px;
+}
+.list-sun1 li{
+    font-size: 13px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.checkboxsun span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.checkboxsunspec{
+    width: 23px;
+    height: 18px;
+    margin-right: 6px;
+}
+.checkboxsunspec[type="checkbox"]:before {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    content: "";
+    background: #FFF;
+}
+.checkboxsunspec[type="checkbox"]:checked:after {
+    background-image: url(../images/sun1/check.png), linear-gradient(135deg, #B1B6BE 0%,#FFF 100%);
+}
+.checkboxsunspec2[type="checkbox"]:checked:after{
+    background-image: url(../images/sun2/check.png), linear-gradient(135deg, #B1B6BE 0%,#FFF 100%);
+}
+.checkboxsunspec[type="checkbox"]:after {
+    position: relative;
+    display: block;
+    left: 2px;
+    top: -20px;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.h4sun{
+    text-align: center;
+    color: #d40c19;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.errorbor{
+    border: 1px solid #f00;
+}
+.errorlist{
+    padding: 10px 10px 0px;
+    overflow: hidden;
+    background: #faeaea;
+}
+.errorlist li{
+    color: #e12828;
+}
+.textsun3{
+    color: #9b761a;
+    text-align: center;
+}
+.textsun3 img{
+    width: auto;
+    display: inline-block;
+}
+.textsun3 span{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.textrorr{
+    font-weight: bold;
+}
+.txtcontent{
+    line-height: 1.6em;
+    font-size: 16px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.mb05{
+    margin-bottom: 5px;
+}
+.contentsunerror{
+    margin-top: 30px;
+}
+.box{
+    position: relative;
+}
+.box .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.box + label {
+    color: #f1e5e6;
+    background-color: #d3394c;
+}
+.box + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+.transper{
+    border: transparent;
+    background: transparent;
+}
+.transper img{
+    width: auto;
+}
+.texidsx label{
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+/*end Hieudt add css PC*/
+
+/*Nhungnh*/
+.h2text{
+    margin: 40px auto 10px auto;
+    text-align: center;
+}
+.h2text span{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'ms pgothic', sans-serif;
+}
+.sun4_top{
+    border-bottom: 1px dotted #bababa;
+}
+.sun4_logo{
+    width: 99px;
+    padding: 10px 0 10px 30px;
+}
+.sun4_tx_cent{
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+.sun4_img1{
+    text-align: center;
+    margin: 20px auto 20px auto;
+    width: 302px;
+}
+.sun4_tx_cent2{
+    text-align: center;
+    font-weight: bold;
+}
+.sun4_bor{
+    border-radius: 4px;
+    border: 1px solid #262626;
+    margin-bottom: 5px;
+    height: 30px;
+}
+.sun4_tx_left{
+    text-align: center;
+    width: 100px;
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 14px;
+    height: 25px;
+    padding-top: 5px;
+    float: left;
+}
+.sun4_tx_right{
+    float: left;
+    text-align: center;
+    color: #ef2462;
+    font-size: 14px;
+    width: 450px;
+    padding-top: 5px;
+}
+.sun4_tx_right span{
+    color: #000000;
+    font-size: 9px;
+}
+.sun4_bg{
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin: 30px 0;
+    padding: 10px;
+    overflow: hidden;
+}
+.qr_left{
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px dotted #b7b7b7;
+    padding-right: 20px;
+}
+.sun4_img2{
+    width: 101px;
+    display: inline-block;
+}
+.sun4_img3{
+    width: 80px;
+    display: inline-block;
+    padding-left: 10px;
+}
+.sun4_btn_mail{
+    width: 321px;
+}
+.sun4_mail{
+    float: right;
+    padding-top: 13px;
+}
+.sun4_top_bot{
+    border-top: 2px dotted #b7b7b7;
+    border-bottom: 2px dotted #b7b7b7;
+    margin: 20px 0;
+    padding: 6px 0;
+    text-align: center;
+}
+.sun4_icon{
+    background: url(../images/sun4_img4.png) no-repeat 230px top;
+    padding-left: 25px;
+    line-height: 30px;
+}
+.sun4_footer p{
+    background: #898989;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    max-width: 641px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+/*End Nhungnh*/
+@media screen and (max-width: 800px) {
+    .show-sp {
+        display: block;
+    }
+    .show-pc {
+        display: none;
+    }
+    .header {
+        background: none;
+        min-width: auto;
+        max-width: auto;
+        min-height: 100%;
+    }
+    .detail-info-header dt {
+        width: 120px;
+        font-size: 16px;
+    }
+    .detail-info-header dd {
+        font-size: 18px;
+    }
+    .info-header p {
+        font-size: 18px;
+    }
+    .info-header p span {
+        font-size: 14px;
+    }
+    .footer {
+        margin-top: 0px;
+    }
+    .footer p:first-child {
+        font-size: 18px;
+    }
+    .footer p {
+        font-size: 16px;
+    }
+    .line-dotted {
+        width: 60%;
+        margin: 12px auto 10px auto;
+    }
+    .sun4_btn_mail{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .detail-info-header dt {
+        width: 100px;
+        font-size: 14px;
+    }
+    .detail-info-header dd {
+        font-size: 16px;
+    }
+    .info-header p {
+        font-size: 16px;
+        padding: 20px 2px 22px 2px;
+    }
+    .info-header p span {
+        font-size: 10px;
+    }
+    .btn-go-page {
+        width: 280px;
+        margin: 20px auto 20px auto;
+    }
+    .footer p {
+        font-size: 12px;
+    }
+    .footer p:first-child {
+        font-size: 14px;
+    }
+    .line-dotted {
+        width: 80%;
+    }
+    /* Hieudt add css SM*/
+    .contentsun1{
+        width: 90%;
+    }
+    .textarea-sun1{
+        width: 95%;
+    }
+    .texidsx{
+        padding-left: 2em;
+        text-indent: -2em;
+    }
+    .transper img{
+        width: 100%;
+    }
+    /*end Hieudt add css SM*/
+    /*Nhung add css SM*/
+    .sun4_logo {
+        padding: 5px 0 5px 10px;
+    }
+    .sun4_tx_cent {
+        margin: 20px 0 10px 0;
+    }
+    .sun4_btn_mail{
+        margin: 0 auto;
+    }
+    .content {
+        margin: 30px auto 0 auto;
+    }
+    .sun4_tx_right{
+        width: 263px;
+        float: right;
+    }
+    .sun4_icon{
+        background: url(../images/sun4_img4.png) no-repeat 135px top;
+    }
+    /*end Nhung*/
+}
+@media screen and (max-width: 375px) {
+    /*Nhung add CSS*/
+    .sun4_tx_right {
+        width: 218px;
+    }
+    .sun4_icon {
+        background: url(../images/sun4_img4.png) no-repeat 110px top;
+    }
+    .sun4_btn_mail {
+        width: 85%;
+    }
+    /*end Nhung*/
+}
+@media screen and (max-width: 320px) {
+    /*Nhung add CSS*/
+    .sun4_tx_right {
+        width: 169px;
+    }
+    .sun4_icon {
+        background: url(../images/sun4_img4.png) no-repeat 85px top;
+    }
+    .sun4_btn_mail {
+        width: 90%;
+    }
+    /*end Nhung*/
+}
