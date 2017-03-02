@@ -10,16 +10,22 @@ use App\Product;
 
 class CategoryController extends Controller
 {
+    /**
+     * [index description]
+     * @return [view]
+     */
     public function index()
     {
     	$categorys = Category::paginate(5);
         return view('category.list',compact('categorys'));
     }
-
+    /**
+     * [create description]
+     * @return view
+     */
     public function create()
     {
-        // dd($this->make_slug('quy hoa'));
-    	return view('category.create');
+        return view('category.create');
     }
 
     /**
@@ -29,8 +35,7 @@ class CategoryController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		// dd($request->all());
-        $rules = [
+		$rules = [
             'name'=>'required|unique:categories,name|max:50'
         ];
         $message = [
@@ -57,22 +62,31 @@ class CategoryController extends Controller
         }   
 	}
     /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
+     * [show description]
+     * @param  interger $id 
+     * @return [type]
      */
     public function show($id)
     {
         $details = Category::with('product')->find($id);
         return view('category.show')->with(['details'=>$details]);
     }
-
+    /**
+     * [edit description]
+     * @param  interger $id 
+     * @return [type]     [description]
+     */
     public function edit($id)
     {
         $category = Category::find($id);
         return view('category.edit')->with(['category'=>$category]);
     }
-
+    /**
+     * [update description]
+     * @param  [type]  $id      [description]
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
     public function update($id,Request $request)
     {
         $rules = [

@@ -18,7 +18,8 @@
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="{{asset('css/plugins/morris.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('css/plugins/morris.css')}}" rel="stylesheet"> -->
+    <link href="{{asset('css/test.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -187,8 +188,11 @@
 
     <!-- Morris Charts JavaScript -->
     <script src="{{asset('js/plugins/morris/raphael.min.js')}}"></script>
-    <script src="{{asset('js/plugins/morris/morris.min.js')}}"></script>
+    <!-- 
+    <script src="{{asset('js/plugins/morris/morris.min.js')}}"></script> 
     <script src="{{asset('js/plugins/morris/morris-data.js')}}"></script>
+    -->    
+    
     <script src="{{asset('js/test.js')}}"></script>
 
 </body>

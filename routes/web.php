@@ -139,4 +139,7 @@ Route::group(['prefix' => 'adm', 'middleware' => 'auth'/*, 'namespace' => 'Admin
 	Route::get('sendbasicemail','MailController@basic_email');
 	Route::get('sendhtmlemail','MailController@html_email');
 	Route::get('sendattachmentemail','MailController@attachment_email');
+
+	// tesst ajax
+	Route::post('/test1','UserController@test1');
 });

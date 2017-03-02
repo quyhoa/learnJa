@@ -5,8 +5,44 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+// check traits
+trait Admin
+{
+  public function checkUser()
+  {
+    return "You are User!";
+  }
+
+  public function checkAdmin()
+  {
+    return "You are Admin";
+  }
+}
+
+trait Admin1
+{
+  public function checkUser1()
+  {
+    return "You are User1!";
+  }
+
+  public function checkAdmin1()
+  {
+    return "You are Admin1";
+  }
+}
+// end check
+
 class HomeController extends Controller
 {
+    use Admin, Admin1;
+        // use Admin, Admin1
+      //     {
+      //         Admin::checkLogin insteadof Admin1;
+      //         //Sử dụng method checkLogin ở trait Admin thay cho  method checkLogin ở trait Admin
+      //         Admin1::isAdmin insteadof Admin
+      //         //Sử dụng method isAdmin ở trait Admin thay cho method isAdmin ở trait Authenticate
+      //     }
     /**
      * Create a new controller instance.
      *
@@ -25,8 +61,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // return view('home');
-        return view('home.home');
+        var_dump($this->checkUser());
+        var_dump($this->checkUser1());
+        exit;
+        // return view('home.home');
     }
 
     public function content1()

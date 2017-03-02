@@ -8,7 +8,7 @@
     <li id="id_product" onclick="setActive('id_product')">
         <a href="/adm/product"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i> Product</a>
     </li>
-    <li id="id_product" onclick="setActive('id_product')">
+    <li id="id_mail" onclick="setActive('id_mail')">
         <a href="{{Route('mail')}}"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i> Mail manager</a>
     </li>
 </ul>

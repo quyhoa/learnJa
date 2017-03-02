@@ -51,7 +51,7 @@ class UserController extends Controller
     }
 
     public function create()
-    {
+    {           
         return view('user.create');
     }
 
@@ -170,5 +170,26 @@ class UserController extends Controller
         }
         
         return $vai;
+    }
+    /**
+     * check exit name when create user
+     * @param  Request $request [_token,name]
+     * @return response         [description]
+     */
+    public function test1(Request $request)
+    {
+        if ($request->ajax()) {
+            $name = $request->name;
+            $user = User::where('name', '=', $name)->count();
+            if($user != 0)
+            {
+                $data['status'] = 1;
+                $data['data'] = 'Name đã tồn tại nhưng bạn vẫn có thể sữ dụng';
+            }else{
+                $data['status'] = 0;
+                $data['data'] = '';
+            }
+            return response()->json($data);
+        }
     }
 }

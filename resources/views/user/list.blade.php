@@ -3,7 +3,7 @@
 	<div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                List Users!
+                List Users!quyhoa
             </h1>
 			
 			<div class="table-responsive">

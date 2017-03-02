@@ -41,15 +41,15 @@
     <nav class="navbar navbar-inverse bg-primary">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">My Language</a>
+          <a class="navbar-brand" href="/adm">My Language</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="actives"><a href="#">Home</a></li>
           <li><a href="{{route('level5',1)}}">Level 1</a></li>
-          <li><a href="#">Level 2</a></li>
-          <li><a href="#">Level 3</a></li>
-          <li><a href="#">Level 4</a></li>
-          <li><a href="#">Level 5</a></li>
+          <li><a href="{{route('level5',2)}}">Level 2</a></li>
+          <li><a href="{{route('level5',3)}}">Level 3</a></li>
+          <li><a href="{{route('level5',4)}}">Level 4</a></li>
+          <li><a href="{{route('level5',5)}}">Level 5</a></li>
           <li><a href="#">Advance</a></li>
         </ul>
         <form class="navbar-form navbar-left">
